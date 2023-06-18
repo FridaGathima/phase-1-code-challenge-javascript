@@ -1,4 +1,4 @@
-//This function is used to detect by how many km a car travels above the speed limit.
+//The speed limit is set at 70. This function is used to calculate by how many km a car travels above the speed limit.
 
 function speedDetector (speed) {
     let speedLimit = speed - 70 // This calculates by how many km a car went above the speed limit of 70
@@ -28,7 +28,7 @@ function speedDetector (speed) {
         return "Points:11";
     }else if (speedLimit >55 && speedLimit <= 60) {
         return "Points 12";
-    }else if (speedLimit >60) { // any speed limit above 60, the licence is suspended.
+    }else if (speedLimit >60) { // any speed above the speed limit of 60, the licence is suspended.
         return "Licence suspended";
     }
 }
