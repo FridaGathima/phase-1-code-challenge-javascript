@@ -6,7 +6,8 @@
 //If a user inputs Gross Salary of < 0, each of the functions outputs "Invalid Gross Salary."
 
 
-// This function calculates the PAYE Tax
+// This function calculates the PAYE Tax payable to KRA. 
+//The deductions are dependant on the gross salary. They are 10%, 25% and 30% of gross salary
 
 function payeCalculator (grossSalary) {  
     if (grossSalary > 0) {
@@ -21,7 +22,7 @@ function payeCalculator (grossSalary) {
     return "Invalid Gross Salary";
 }
 
-// This function calculates the NSSF Contribution
+// This function calculates the NSSF Contribution. The contribution is 6% of the gross salary.
 
 function nssfCalculator (grossSalary) {
     if (grossSalary > 0) {
@@ -30,7 +31,7 @@ function nssfCalculator (grossSalary) {
     return "Invalid Gross Salary";
 }
 
-// This function calculates the NHIF Contribution
+// This function calculates the NHIF Contribution. The deductions are dependant on the gross salary.
 
 function nhifCalculator (grossSalary) {
     if (grossSalary > 0) {
@@ -73,7 +74,8 @@ function nhifCalculator (grossSalary) {
         return "Invalid Gross Salary";
 }
 
-// This function calculates the Net Salary
+// This function calculates the Net Salary. 
+//Net salary is calculated with this formula: Net salary = Gross salary - (Paye Tax + Nssf + NHIF)
 
 function netSalaryCalculator (grossSalary,benefits) {
     if (grossSalary > 0) {
@@ -81,5 +83,3 @@ function netSalaryCalculator (grossSalary,benefits) {
     } else
         return "Invalid Gross Salary";
 }
-
-console.log(netSalaryCalculator(100000))
