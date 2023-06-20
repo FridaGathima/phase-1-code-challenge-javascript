@@ -81,3 +81,5 @@ function netSalaryCalculator (grossSalary,benefits) {
     } else
         return "Invalid Gross Salary";
 }
+
+console.log(netSalaryCalculator(100000))
