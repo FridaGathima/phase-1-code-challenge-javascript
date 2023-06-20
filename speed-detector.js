@@ -5,12 +5,12 @@ function speedDetector (speed) {
     if (speed <= 70) { 
         return "Ok";
     } else {
-        let dePoints = speed - 70 
-        dePoints = dePoints / 5
-        if (dePoints >= 12) {
+        let dePointsGross= speed - 70 //calculates by how many km the car went above the speed limit.
+        dePoints = dePointsGross / 5 // divides the speed limit by 5 to get the demerit points since
+        if (dePoints >= 12) {        // 1 point is awarded for every 5km.
             return "Licence Suspended";
         }else {
             return "Points:" + dePoints 
         }
     }   
-}
+} 
